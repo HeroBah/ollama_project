@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-jnsjy8u!7y=ay8f*c4&390n)94-y_i-2f3x!l3s6(!du-33g4w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'ollama-project.onrender.com').split(',')
+# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'ollama-project.onrender.com').split(',')
+ALLOWED_HOSTS = ['ollama-project.onrender.com']
+
 
 
 # Application definition
