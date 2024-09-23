@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jnsjy8u!7y=ay8f*c4&390n)94-y_i-2f3x!l3s6(!du-33g4w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'ollama-project.onrender.com').split(',')
 ALLOWED_HOSTS = ['ollama-project.onrender.com']
@@ -79,10 +79,15 @@ WSGI_APPLICATION = 'ollama_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ollama_projrct',
+        'USER': 'ollama_projrct_user',
+        'PASSWORD': 'yBEG42dj2CX7K6NzlSQqMTFBH3hnIpSg',
+        'HOST': 'dpg-crolu3q3esus73c39tig-a',
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
+
 
 
 # Password validation
