@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ollama Chat</title>
+</head>
+<body>
+    <h1>Chat with Ollama</h1>
+    <form action="{% url 'get_response' %}" method="POST">
+        {% csrf_token %}
+        <label for="user_input">Enter your text:</label>
+        <textarea name="user_input" rows="4" cols="50"></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% if response %}
+        <h2>Response:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
